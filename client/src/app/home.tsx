@@ -1,7 +1,8 @@
-import { DesktopBanner } from "@/widgets/home/banner/desktop-banner"
+import { Responsive } from "@/shared/responsive"
+import { DesktopBanner, MobileBanner } from "@/widgets/home"
 
 export const HomePage = () => {
   return <div>
-    <DesktopBanner />
+    <Responsive desktop={<DesktopBanner />} mobile={<MobileBanner />}/>
   </div>
 }
