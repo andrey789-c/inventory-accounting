@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
+import { AuthModal, Header } from "@/features";
 
 const robotoSans = Roboto({
   variable: "--font-roboto-sans",
@@ -19,6 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${robotoSans.variable}`}>
+        {/* <AuthModal /> */}
+        <Header />
         {children}
       </body>
     </html>
