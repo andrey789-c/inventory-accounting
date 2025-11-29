@@ -5,11 +5,11 @@ export const DesktopBanner = () => {
 		<div className="w-full h-screen relative overflow-hidden flex items-center justify-between">
 			<div className="absolute inset-0 bg-gradient-to-r from-gray-100 via-[#d6dae0] to-gray-600"></div>
 			<div className="container mx-auto px-6 flex items-center justify-between">
-				<div className="relative z-10 w-1/2 flex flex-col items-start justify-center text-left max-w-xl pl-10">
-					<h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-900">
+				<div className="relative z-10 w-1/2 flex flex-col items-start justify-center text-left max-w-3xl">
+					<h1 className="text-3xl  md:text-4xl lg:text-6xl font-bold mb-4 text-gray-900">
 						Управляйте инвентарем просто и надежно
 					</h1>
-					<p className="text-lg md:text-xl mb-8 text-gray-700 opacity-90">
+					<p className="text-lg max-w-2xl md:text-xl mb-8 text-gray-700 opacity-90">
 						Inventory Tables Manager дает вам полный контроль над вашими
 						запасами. Безопасное хранилище, быстрое редактирование и полная
 						прозрачность — в одном месте.

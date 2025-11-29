@@ -1,26 +1,34 @@
 import { Button } from "@/components/ui/button";
 
 export const MobileBanner = () => {
-	return <div className="w-full min-h-screen bg-gray-100 text-gray-900 flex flex-col items-center justify-center px-6 py-10 text-center">
-	<h1 className="text-3xl font-bold mb-3">Your Project Title</h1>
+	return (
+		<div className="w-full min-h-screen relative overflow-hidden flex flex-col justify-between bg-gradient-to-b from-gray-100 via-[#d6dae0] to-gray-600 px-5 pt-40 py-10">
 
-	<p className="text-base max-w-sm mb-6 opacity-80">
-		A collection of powerful, simple tools to help you build and launch
-		projects faster.
-	</p>
+			{/* ТЕКСТ */}
+			<div className="flex flex-col items-start text-left z-10">
+				<h1 className="text-3xl font-bold mb-4 text-gray-900 leading-tight">
+					Управляйте инвентарем
+					<br /> просто и надежно
+				</h1>
 
-	<div className="flex flex-col w-full max-w-xs gap-5">
-		<Button className="w-full py-3 text-lg !text-white" asChild>
-			<a href="/register">Sign Up</a>
-		</Button>
-		<Button
-			variant="outline"
-			className="w-full py-3 text-lg border-gray-300 text-gray-900"
-			asChild
-		>
-			<a href="/login">Log In</a>
-		</Button>
-	</div>
-</div>;
-	
+				<p className="text-base text-gray-700 opacity-90 mb-6">
+					Inventory Tables Manager дает полный контроль над вашими запасами —
+					безопасное хранилище, быстрое редактирование и прозрачность.
+				</p>
+
+				<Button className="px-6 py-3 text-base !text-white" asChild>
+					<a href="/register">Попробовать</a>
+				</Button>
+			</div>
+
+			{/* КАРТИНКА — ВСЕГДА ВНИЗУ */}
+			<div className="w-full h-[400px] flex justify-center mt-10">
+				<img
+					src="/main-banner.png"
+					alt="Main banner"
+					className="w-full max-w-sm object-contain"
+				/>
+			</div>
+		</div>
+	);
 };

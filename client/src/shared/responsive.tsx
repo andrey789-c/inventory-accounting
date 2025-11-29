@@ -1,3 +1,6 @@
+'use client'
+
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { FC, ReactNode } from "react";
 
 interface IResponsiveProps {
@@ -5,18 +8,13 @@ interface IResponsiveProps {
   mobile: ReactNode
 }
 
-export const Responsive:FC<IResponsiveProps> = ({desktop, mobile}) => {
-	return (
-		<>
-			{/* Desktop version visible on md+ screens */}
-			<div className="hidden md:block">
-				{desktop}
-			</div>
+export const Responsive: FC<IResponsiveProps> = ({ desktop, mobile }) => {
 
-			{/* Mobile version visible on sm screens */}
-			<div className="block md:hidden">
-				{mobile}
-			</div>
-		</>
-	);
+  const isMobile = useMediaQuery("(max-width: 767px)");
+
+  return (
+    <>
+      {isMobile ? mobile : desktop}
+    </>
+  );
 };
